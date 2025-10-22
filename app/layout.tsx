@@ -9,22 +9,25 @@ import { ClientInit } from "./client-init";
 export const metadata: Metadata = {
   title: "Descubra Sua Alma Gêmea | Visualização Energética com Seraphina",
   description: "Seraphina revela as características da sua alma gêmea através de leitura energética e visualização espiritual. Descubra quem está destinado a você.",
-  viewport: {
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: "black-translucent",
+  },
+  other: {
+    "mobile-web-app-capable": "yes",
+  },
+};
+
+export function generateViewport() {
+  return {
     width: "device-width",
     initialScale: 1,
     maximumScale: 5,
     userScalable: true,
     viewportFit: "cover",
-  },
-  appleWebApp: {
-    capable: true,
-    statusBarStyle: "black-translucent",
-  },
-  themeColor: "#1a0a2e",
-  other: {
-    "mobile-web-app-capable": "yes",
-  },
-};
+    themeColor: "#1a0a2e",
+  };
+}
 
 export default function RootLayout({
   children,
