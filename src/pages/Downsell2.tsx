@@ -187,14 +187,14 @@ export default function Downsell2() {
                   size="lg"
                   className="w-full gradient-premium text-[1.0625rem] leading-tight md:text-xl py-7 hover:opacity-90 animate-pulse-glow"
                 >
-                  <a href={process.env.NEXT_PUBLIC_OFFER_DWS2_ACCEPTED_YES}>
+                  <a href={import.meta.env.VITE_OFFER_DWS2_ACCEPTED_YES}>
                     <Crown className="!w-6 !h-6" />
                     YES! I Can't Miss This • $19.90 Now
                   </a>
                 </Button>
 
                 <a
-                  href={process.env.NEXT_PUBLIC_OFFER_DWS2_ACCEPTED_NO}
+                  href={import.meta.env.VITE_OFFER_DWS2_ACCEPTED_NO}
                   className="block text-center text-sm text-muted-foreground hover:text-foreground underline"
                 >
                   No, I give up all of this and will continue alone

@@ -123,13 +123,13 @@ export default function Upsell2() {
 
               <div className="space-y-4">
                 <Button asChild size="lg" className="w-full gradient-premium text-[1.0625rem] leading-tight md:text-xl py-7 hover:opacity-90">
-                  <a href={process.env.NEXT_PUBLIC_OFFER_UP2_ACCEPTED_YES}>
+                  <a href={import.meta.env.VITE_OFFER_UP2_ACCEPTED_YES}>
                     <Crown className="!w-6 !h-6 flex-shrink-0" />
                     YES! I Want Complete VIP Experience • $47
                   </a>
                 </Button>
 
-                <a href={process.env.NEXT_PUBLIC_OFFER_UP2_ACCEPTED_NO} className="block text-center text-sm text-muted-foreground hover:text-foreground underline">
+                <a href={import.meta.env.VITE_OFFER_UP2_ACCEPTED_NO} className="block text-center text-sm text-muted-foreground hover:text-foreground underline">
                   No, I'll continue without knowing where or having the follow-up
                 </a>
               </div>
