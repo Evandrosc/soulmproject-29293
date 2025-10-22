@@ -202,7 +202,7 @@ export default function Packages() {
                   data-event="front-offer-selected"
                   className="w-full gradient-gold h-auto text-xl py-4 hover:opacity-90 transition-opacity"
                 >
-                  <a href={import.meta.env.VITE_OFFER_FRONT}>
+                  <a href={process.env.NEXT_PUBLIC_OFFER_FRONT}>
                     🔥 Start Now • {frontOffer.price}
                   </a>
                 </Button>

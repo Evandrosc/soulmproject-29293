@@ -1,3 +1,5 @@
+'use client';
+
 import { Button } from '@/components/ui/button';
 import { RotateCcw } from 'lucide-react';
 import { useQuizStore } from '@/hooks/useQuizStore';

@@ -182,14 +182,14 @@ export default function Downsell1() {
                   size="lg"
                   className="w-full h-auto gradient-gold text-[1.0625rem] leading-tight md:text-xl py-2 hover:opacity-90 animate-pulse-glow"
                 >
-                  <a href={import.meta.env.VITE_OFFER_DWS1_ACCEPTED_YES}>
+                  <a href={process.env.NEXT_PUBLIC_OFFER_DWS1_ACCEPTED_YES}>
                     <Heart className="!w-6 !h-6" />
                     YES! I Accept This Last Offer • Only $19.90
                   </a>
                 </Button>
 
                 <a
-                  href={import.meta.env.VITE_OFFER_DWS1_ACCEPTED_NO}
+                  href={process.env.NEXT_PUBLIC_OFFER_DWS1_ACCEPTED_NO}
                   className="block text-center text-sm text-muted-foreground hover:text-foreground underline"
                 >
                   No, I'll give up this information and continue in the dark

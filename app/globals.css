@@ -1,0 +1,192 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 270 40% 3%;
+    --foreground: 45 100% 95%;
+
+    --card: 270 30% 8%;
+    --card-foreground: 45 100% 95%;
+
+    --popover: 270 30% 8%;
+    --popover-foreground: 45 100% 95%;
+
+    --primary: 270 70% 60%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 45 95% 60%;
+    --secondary-foreground: 270 40% 10%;
+
+    --muted: 270 20% 15%;
+    --muted-foreground: 270 10% 60%;
+
+    --accent: 280 80% 70%;
+    --accent-foreground: 270 40% 10%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 270 20% 20%;
+    --input: 270 20% 20%;
+    --ring: 270 70% 60%;
+
+    --radius: 0.75rem;
+
+    /* Místico */
+    --mystical-purple: 270 70% 60%;
+    --mystical-gold: 45 95% 60%;
+    --mystical-dark: 270 40% 5%;
+    --mystical-glow: 280 80% 70%;
+    
+    /* Gradientes */
+    --gradient-mystical: linear-gradient(135deg, hsl(270 70% 60%), hsl(280 80% 70%));
+    --gradient-gold: linear-gradient(135deg, hsl(45 95% 60%), hsl(35 95% 55%));
+    --gradient-dark: linear-gradient(180deg, hsl(270 40% 3%), hsl(270 40% 8%));
+    
+    /* Sombras */
+    --shadow-glow: 0 0 30px hsl(270 70% 60% / 0.4);
+    --shadow-gold: 0 0 30px hsl(45 95% 60% / 0.3);
+  }
+
+  .dark {
+    --background: 270 40% 3%;
+    --foreground: 45 100% 95%;
+
+    --card: 270 30% 8%;
+    --card-foreground: 45 100% 95%;
+
+    --popover: 270 30% 8%;
+    --popover-foreground: 45 100% 95%;
+
+    --primary: 270 70% 60%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 45 95% 60%;
+    --secondary-foreground: 270 40% 10%;
+
+    --muted: 270 20% 15%;
+    --muted-foreground: 270 10% 60%;
+
+    --accent: 280 80% 70%;
+    --accent-foreground: 270 40% 10%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 270 20% 20%;
+    --input: 270 20% 20%;
+    --ring: 270 70% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+
+    /* Firefox */
+    scrollbar-width: thin;
+    scrollbar-color: hsl(270 70% 60%) #0000; /* thumb e track */
+  }
+
+  html {
+    /* Prevent horizontal scroll */
+    overflow-x: hidden;
+    width: 100%;
+    /* Smooth scroll */
+    scroll-behavior: smooth;
+    /* Safe area for iPhone notch */
+    padding-top: env(safe-area-inset-top);
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    /* Prevent horizontal scroll */
+    overflow-x: hidden;
+    width: 100%;
+    /* Better touch scrolling on iOS */
+    -webkit-overflow-scrolling: touch;
+    /* Prevent text size adjustment on iOS */
+    -webkit-text-size-adjust: 100%;
+    /* Improve tap highlight */
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  }
+
+  /* Ensure minimum font size to prevent zoom on iOS */
+  input,
+  textarea,
+  select {
+    font-size: 16px !important;
+  }
+
+  /* Better touch targets for mobile */
+  button,
+  a,
+  [role="button"] {
+    min-height: 44px;
+    min-width: 44px;
+  }
+
+  /* Prevent layout shift from scrollbar */
+  #root {
+    overflow-x: hidden;
+    width: 100%;
+  }
+
+  .gradient-mystical {
+    background: linear-gradient(135deg, hsl(270 70% 60%), hsl(280 80% 70%));
+  }
+
+  .gradient-gold {
+    background: linear-gradient(135deg, hsl(45 95% 60%), hsl(35 95% 55%));
+  }
+
+  .gradient-premium {
+    background: linear-gradient(135deg, hsl(280 80% 70%), hsl(320 70% 60%));
+  }
+
+  .text-gradient-gold {
+    background: linear-gradient(135deg, hsl(45 95% 60%), hsl(35 95% 55%));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .glow-purple {
+    box-shadow: 0 0 30px hsl(270 70% 60% / 0.4);
+  }
+
+  .glow-gold {
+    box-shadow: 0 0 30px hsl(45 95% 60% / 0.3);
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+  }
+
+  @keyframes pulse-glow {
+    0%, 100% { opacity: 0.7; }
+    50% { opacity: 1; }
+  }
+
+  @keyframes shimmer {
+    0% { background-position: -1000px 0; }
+    100% { background-position: 1000px 0; }
+  }
+
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+
+  .animate-pulse-glow {
+    animation: pulse-glow 2s ease-in-out infinite;
+  }
+}

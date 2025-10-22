@@ -156,14 +156,14 @@ export default function Upsell1() {
                   size="lg"
                   className="w-full gradient-gold text-lg md:text-xl py-7 hover:opacity-90 leading-tight"
                 >
-                  <a href={import.meta.env.VITE_OFFER_UP1_ACCEPTED_YES}>
+                  <a href={process.env.NEXT_PUBLIC_OFFER_UP1_ACCEPTED_YES}>
                     <Heart className="!w-6 !h-6 flex-shrink-0" />
                     YES! I Want to Know WHEN • $27
                   </a>
                 </Button>
 
                 <a
-                  href={import.meta.env.VITE_OFFER_UP1_ACCEPTED_NO}
+                  href={process.env.NEXT_PUBLIC_OFFER_UP1_ACCEPTED_NO}
                   className="block text-center text-sm text-muted-foreground hover:text-foreground underline"
                 >
                   No, I prefer not to know when I'll meet him

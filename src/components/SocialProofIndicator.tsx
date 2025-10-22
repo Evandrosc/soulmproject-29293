@@ -1,3 +1,5 @@
+'use client';
+
 import { useState, useEffect } from 'react';
 import { Users, TrendingUp } from 'lucide-react';
 import { motion } from 'framer-motion';
